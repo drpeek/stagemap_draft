@@ -1,0 +1,123 @@
+\section{Appendix}
+
+\subsection{MinDL+LSH}
+
+ 
+\begin{algorithm}
+	\KwIn{$\mathscr{S}=\{S_1,S_2,...,S_n\}, th_{start}, th_{end}, th_{rate}$}
+	\KwOut{$\mathscr{C}=\{(P_1,G_1),(P_2,G_2),...,(P_k,G_k)\}$}
+	$\mathscr{C}=\{(S_1,\{S_1\}),(S_2,\{S_2\}),...,(S_n,\{S_n\})\}$\;
+	PriorityQueue $\mathscr{Q}=\emptyset$\;
+	$th=th_{start}$\;
+	\While{$th>th_{end}$}{
+		\tcc{LSH table initialization with threshold $th$}
+		lshInit($th$)\;
+		\For{$c_i$ in $\mathscr{C}$}{
+			lshInsert($c_i$)
+		}
+		\BlankLine
+		\tcc{MinDL: initialization phase}
+		\For{$c_i\in \mathscr{C}$}{ 
+			\For{$c_j\in lshQuery(c_i)$}{
+				$\Delta L, c^\ast = Merge(c_i,c_j)$\;
+				\If{$\Delta L>0$}{
+					push $(\Delta L, c^\ast, c_i, c_j)$ to $\mathscr{Q}$\;					
+				}			
+			}
+		}
+		\BlankLine
+		\tcc{MinDL: iterative merging phase}
+		\While{$\mathscr{Q}\neq\emptyset$}{
+			pop $(\Delta L, c^\ast, c_i, c_j)$ from $\mathscr{Q}$\;
+			remove $c_i, c_j$ from $\mathscr{C}$, add $c^\ast$ to $\mathscr{C}$\;
+			$c_{new} = c^\ast$\;
+			\tcc{LSH table update}
+			lshDelete($c_i$), lshDelete($c_j$)\;
+			lshInsert($c^\ast$)\;
+			\For{$c\in lshQuery(c_{new})$}{
+				$\Delta L, c^\ast = Merge(c, c_{new})$\;
+				\If{$\Delta L>0$}{				
+					push $(\Delta L, c^\ast, c, c_{new})$ to $\mathscr{Q}$\;
+				}
+			}
+		}	
+		$th=th\times th_{rate}$\;	
+	}
+	\Return $\mathscr{C}$
+	\caption{MDL+LSH}
+\end{algorithm}
+
+In the algorithm, \textit{lshInit} creates a hash table for the clusters in $\mathscr{C}$. Essentially the hash table is composed of a set of buckets. Each bucket contains a set of clusters and their representative patterns are hashed to the same value. The hash table needs to be recreated when $th$ changes. It takes $O(n)$ ($n=\|\mathscr{C}\|$) to populate the hash table with the clusters in $\mathscr{C}$. $n$ decreases over iterations as the clusters are merged together. \textit{lshDelete} and \textit{lshInsert} update the hash table when the clusters are merged. \textit{lshQuery} takes a cluster and returns all the other clusters in the same bucket.
+
+Using LSH reduces the need to compute $\Delta L$ for all pairs of clusters in $\mathscr{C}$ which takes $O(n^2)$ time, instead, only pairs within the same bucket will be considered. In this way, the method can reduce the running time significantly. This is validated by the empirical results in Fig.~\ref{fig:performance}.
+
+The three parameters $th_{start}$, $th_{end}$ and $th_{rate}$ need to be manually chosen to control the LSH threshold over iterations. In general, $th_{start}$ should be close to 1 such that fewer candidate clusters need to be checked in earlier iterations while $th_{end}$ should be close to 0 to make sure the description length is effectively minimized. $th_{rate}$ should be a value between 0 and 1 to gradually decrease the threshold over time. We set $th_{start} = 0.9$, $th_{end} = 0.2$ and $th_{rate} = 0.6$ in the experiments.
+
+\clearpage
+\subsection{Analytic tasks survey}
+
+Plaisant and Shneiderman \cite{plaisant2016tasks} have recently summarized a set of high-level analytic tasks for event sequence data. We survey the existing visual analytic systems for event sequence data and list the tasks they support in Table.~\ref{tab:tasks}. Besides that, we also interview the experts to gather the requirements for the new application domain, i.e., vehicle data analytics. The analytical tasks proposed by Plaisant and Shneiderman are listed below. From Table.~\ref{tab:tasks}, we identify that \textbf{\textit{T1}}, \textbf{\textit{T2}}, \textbf{\textit{T5}} and \textbf{\textit{T7}} are the most commonly supported tasks across a wide range of visualization systems.
+
+Heighten awareness
+
+\begin{compactitem}
+	\item \textbf{\textit{T1}}. Review in detail a few records.
+	\item \textbf{\textit{T2}}. Compile descriptive information about the dataset or a subgroup of records and events (esp. through aggregated views).
+	\item \textbf{\textit{T3}}. Find and describe deviations from required or expected patterns.
+\end{compactitem}
+
+Prepare or select data for further study
+
+\begin{compactitem}
+	\item \textbf{\textit{T4}}. Review data quality and inform choices to be made in order to model the data.
+	\item \textbf{\textit{T5}}. Identify a set of records of interest.
+\end{compactitem}
+
+Understanding impact of event patterns; plan action
+
+\begin{compactitem}
+	\item \textbf{\textit{T6}}. Compare two or more sets of records.
+	\item \textbf{\textit{T7}}. Study antecedents or sequelae of an event of interest.
+	\item \textbf{\textit{T8}}. Generate recommendations on actions to take.
+\end{compactitem}
+
+\begin{table*}[h]
+	\caption{Summary of high-level tasks in previous design studies and in the new application domain, i.e., vehicle fault sequence analysis.}
+	\label{tab:tasks}
+	\scriptsize%
+	\centering%
+	\begin{tabu}{%
+			l%
+			*{7}{c}%
+			*{2}{r}%
+		}
+		\toprule
+		& T1   & T2   & T3 & T4   & T5  &  T6  & T7  & T8   \\\midrule
+		Lifelines2~\cite{wang2008aligning} & \checkmark & & & & \checkmark & & \checkmark & \\\midrule
+		ActiviTree~\cite{vrotsou2009activitree} & & \checkmark & & & \checkmark & \checkmark & \checkmark & \\\midrule DecisionFlow~\cite{gotz2014decisionflow} & & \checkmark & & & \checkmark & & & \checkmark \\ \midrule Peekquence~\cite{kwon2016peekquence} & \checkmark & \checkmark & & & & & \checkmark & \\\midrule
+		EventAction~\cite{du2016eventaction} & \checkmark & \checkmark & & \checkmark & \checkmark & \checkmark & & \checkmark \\ \midrule  CoCo~\cite{malik2015cohort} & \checkmark & \checkmark & & &\checkmark & \checkmark & & \\\midrule
+		Frequence~\cite{perer2014frequence} & & \checkmark & & & \checkmark & & & \\\midrule
+		Monroe et al.~\cite{monroe2013temporal}   &  & \checkmark & & & \checkmark & & \checkmark & \\\midrule
+		Liu et al.~\cite{liu2017patterns} & \checkmark & \checkmark & & & \checkmark & & \checkmark &\\
+		\midrule
+		Vehicle fault sequence analysis & \checkmark & \checkmark & & & \checkmark & & \checkmark &\\
+		\bottomrule
+	\end{tabu}%
+\end{table*}
+
+\clearpage
+\subsection{Qualitative Comparison of Data Overview}
+\label{section:comparison}
+
+\revision{To evaluate the effectiveness of our approach, we further conduct an experiment to compare the data overview (Fig.~\ref{fig:evenflow}) generated by EventFlow~\cite{eventflow}, one of the state-of-the-art event sequence visualization techniques, and the data overview generated with the our approach.}
+
+\revision{In Fig.~\ref{fig:evenflow}, the overview on the left shows the result of the VFS dataset. We can see that EventFlow can hardly group sequences and hence there are few patterns can be identified from the overview. Compared with the result of the proposed approach (Fig.~\ref{fig:case0_2}), we can see that our method is better at discovering salient patterns in this noisy data, while EventFlow tends to generate fragmented results. On the other hand, by comparing the overview on the right with the overivew in Fig.~\ref{fig:case1_0}, the result of EventFlow can also capture visually salient patterns. The result demonstrates that the proposed approach is particular suitable for the analysis of noisy data.}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\linewidth]{pictures/eventflow_both}
+	\caption{The data overview generated by EventFlow~\cite{eventflow}. Left: the result of the VFS dataset. Right: the result of the Agavue dataset.}
+	\label{fig:evenflow}
+\end{figure}
+
+ 

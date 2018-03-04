@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/panpan/Dropbox/EventSequenceMDL/paper/draft_vast17_mdl_revision/.texpadtmp/draft_vast17_mdl.aux
+The style file: ../abbrv-doi.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: ../references.bib
+Repeated entry---line 283 of file ../references.bib
+ : @inproceedings{navlakha2008graph
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1169 of file ../references.bib
+ : @article{cao2016episogram
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1191 of file ../references.bib
+ : @inproceedings{shen2012visual
+ :                              ,
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "zgraggen2015s"
+refers to entry "DBLP:conf/chi/2015", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/chi/2015"
+Warning--to sort, need author or key in googleanalytics
+Warning--empty booktitle in agavue
+Warning--empty year in agavue
+Warning--empty journal in liu2017coreflow
+Warning--can't use both volume and number fields in wanner2014state
+You've used 60 entries,
+            2598 wiz_defined-function locations,
+            905 strings with 16458 characters,
+and the built_in function-call counts, 24234 in all, are:
+= -- 2400
+> -- 1211
+< -- 23
++ -- 483
+- -- 416
+* -- 1721
+:= -- 3835
+add.period$ -- 198
+call.type$ -- 60
+change.case$ -- 384
+chr.to.int$ -- 0
+cite$ -- 65
+duplicate$ -- 925
+empty$ -- 1902
+format.name$ -- 416
+if$ -- 5220
+int.to.chr$ -- 0
+int.to.str$ -- 60
+missing$ -- 62
+newline$ -- 300
+num.names$ -- 118
+pop$ -- 447
+preamble$ -- 1
+purify$ -- 327
+quote$ -- 0
+skip$ -- 666
+stack$ -- 0
+substring$ -- 1508
+swap$ -- 275
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 234
+warning$ -- 5
+while$ -- 224
+width$ -- 62
+write$ -- 663
+(There were 4 error messages)

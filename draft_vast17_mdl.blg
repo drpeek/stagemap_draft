@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: draft_vast17_mdl.aux
+The style file: abbrv-doi.bst
+Database file #1: references.bib
+Repeated entry---line 596 of file references.bib
+ : @inproceedings{shen2012visual
+ :                              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 679 of file references.bib
+ : @article{guo2018eventthread
+ :                            ,
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "zgraggen2015s"
+refers to entry "DBLP:conf/chi/2015", which doesn't exist
+Warning--I didn't find a database entry for "DBLP:conf/chi/2015"
+Warning--empty journal in liu2017coreflow
+(There were 3 error messages)

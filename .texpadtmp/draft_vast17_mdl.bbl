@@ -1,0 +1,382 @@
+\begin{thebibliography}{10}
+
+\bibitem{googleanalytics}
+Google analytics. https://analytics.google.com/.
+
+\bibitem{brill2000improved}
+E.~Brill and R.~C. Moore.
+\newblock An improved error model for noisy channel spelling correction.
+\newblock In {\em Proceedings of the 38th Annual Meeting on Association for
+  Computational Linguistics}, pp. 286--293. Association for Computational
+  Linguistics, 2000.
+
+\bibitem{cadez2003model}
+I.~Cadez, D.~Heckerman, C.~Meek, P.~Smyth, and S.~White.
+\newblock Model-based clustering and visualization of navigation patterns on a
+  web site.
+\newblock {\em Data Mining and Knowledge Discovery}, 7(4):399--424, 2003.
+
+\bibitem{calders2009using}
+T.~Calders, C.~W. G{\"u}nther, M.~Pechenizkiy, and A.~Rozinat.
+\newblock Using minimum description length for process mining.
+\newblock In {\em Proceedings of the 2009 ACM symposium on Applied Computing},
+  pp. 1451--1455. ACM, 2009.
+
+\bibitem{cao2016episogram}
+N.~Cao, Y.-R. Lin, F.~Du, and D.~Wang.
+\newblock Episogram: Visual summarization of egocentric social interactions.
+\newblock {\em IEEE computer graphics and applications}, 36(5):72--81, 2016.
+
+\bibitem{Chuang2012}
+J.~Chuang, D.~Ramage, C.~Manning, and J.~Heer.
+\newblock Interpretation and trust: Designing model-driven visualizations for
+  text analysis.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, CHI '12, pp. 443--452. ACM, New York, NY, USA, 2012.
+
+\bibitem{du2016eventaction}
+F.~Du, C.~Plaisant, N.~Spring, and B.~Shneiderman.
+\newblock Eventaction: Visual analytics for temporal event sequence
+  recommendation.
+\newblock {\em Proceedings of the IEEE Visual Analytics Science and
+  Technology}, 2016.
+
+\bibitem{du2016tvcg}
+F.~Du, B.~Shneiderman, C.~Plaisant, S.~Malik, and A.~Perer.
+\newblock Coping with volume and variety in temporal event sequences:
+  Strategies for sharpening analytic focus.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  PP(99):1--14, 2016.
+
+\bibitem{ferstay2013variant}
+J.~A. Ferstay, C.~B. Nielsen, and T.~Munzner.
+\newblock Variant view: Visualizing sequence variants in their gene context.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  19(12):2546--2555, 2013.
+
+\bibitem{agavue}
+D.~Fisher.
+\newblock Agavue event data sample: Full dataset. version of october 20, 2016.
+  microsoft research. retrieved from http://eventevent.github.io.
+
+\bibitem{gotz2016soft}
+D.~Gotz.
+\newblock Soft patterns: Moving beyond explicit sequential patterns during
+  visual analysis of longitudinal event datasets.
+\newblock In {\em Proceedings of the IEEE VIS 2016 Workshop on Temporal \&
+  Sequential Event Analysis}, 2016.
+
+\bibitem{gotz2014decisionflow}
+D.~Gotz and H.~Stavropoulos.
+\newblock Decisionflow: Visual analytics for high-dimensional temporal event
+  sequence data.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  20(12):1783--1792, 2014.
+
+\bibitem{grunwald2004tutorial}
+P.~Grunwald.
+\newblock A tutorial introduction to the minimum description length principle.
+\newblock {\em arXiv preprint math/0406077}, 2004.
+
+\bibitem{grunwald2007minimum}
+P.~D. Gr{\"u}nwald.
+\newblock {\em The minimum description length principle}.
+\newblock MIT press, 2007.
+
+\bibitem{haroz2016connected}
+S.~Haroz, R.~Kosara, and S.~L. Franconeri.
+\newblock The connected scatterplot for presenting paired time series.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  22(9):2174--2186, 2016.
+
+\bibitem{ioffe2010improved}
+S.~Ioffe.
+\newblock Improved consistent sampling, weighted minhash and l1 sketching.
+\newblock In {\em Data Mining (ICDM), 2010 IEEE 10th International Conference
+  on}, pp. 246--255. IEEE, 2010.
+
+\bibitem{kiernan2009constructing}
+J.~Kiernan and E.~Terzi.
+\newblock Constructing comprehensive summaries of large event sequences.
+\newblock {\em ACM Transactions on Knowledge Discovery from Data (TKDD)},
+  3(4):21, 2009.
+
+\bibitem{Koga2007}
+H.~Koga, T.~Ishibashi, and T.~Watanabe.
+\newblock Fast agglomerative hierarchical clustering algorithm using
+  locality-sensitive hashing.
+\newblock {\em Knowledge and Information Systems}, 12(1):25--53, 2007.
+
+\bibitem{krause2016supporting}
+J.~Krause, A.~Perer, and H.~Stavropoulos.
+\newblock Supporting iterative cohort construction with visual temporal
+  queries.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  22(1):91--100, 2016.
+
+\bibitem{cloudlines11}
+M.~Krstajic, E.~Bertini, and D.~Keim.
+\newblock Cloudlines: Compact display of event episodes in multiple
+  time-series.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  17(12):2432--2439, Dec 2011.
+
+\bibitem{kwon2016peekquence}
+B.~C. Kwon, J.~Verma, and A.~Perer.
+\newblock Peekquence: Visual analytics for event sequence data.
+\newblock In {\em ACM SIGKDD 2016 Workshop on Interactive Data Exploration and
+  Analytics}, 2016.
+
+\bibitem{leskovec2014mining}
+J.~Leskovec, A.~Rajaraman, and J.~D. Ullman.
+\newblock {\em Mining of massive datasets}.
+\newblock Cambridge University Press, 2014.
+
+\bibitem{liu2014survey}
+S.~Liu, W.~Cui, Y.~Wu, and M.~Liu.
+\newblock A survey on information visualization: recent advances and
+  challenges.
+\newblock {\em The Visual Computer}, 30(12):1373--1393, 2014.
+
+\bibitem{liumining}
+Z.~Liu, H.~Dev, M.~Dontcheva, and M.~Hoffman.
+\newblock Mining, pruning and visualizing frequent patterns for temporal event
+  sequence analysis.
+\newblock In {\em Proceedings of the IEEE VIS 2016 Workshop on Temporal \&
+  Sequential Event Analysis}, 2016.
+
+\bibitem{liu2017coreflow}
+Z.~Liu, B.~Kerr, M.~Dontcheva, J.~Grover, M.~Hoffman, and A.~Wilson.
+\newblock Coreflow: Extracting and visualizing branching patterns from event
+  sequences.
+\newblock 2017.
+
+\bibitem{liu2017patterns}
+Z.~Liu, Y.~Wang, M.~Dontcheva, M.~Hoffman, S.~Walker, and A.~Wilson.
+\newblock Patterns and sequences: Interactive exploration of clickstreams to
+  understand common visitor paths.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  23(1):321--330, 2017.
+
+\bibitem{lu2016exploring}
+Y.~Lu, M.~Steptoe, S.~Burke, H.~Wang, J.-Y. Tsai, H.~Davulcu, D.~Montgomery,
+  S.~R. Corman, and R.~Maciejewski.
+\newblock Exploring evolving media discourse through event cueing.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  22(1):220--229, 2016.
+
+\bibitem{makanju2008logview}
+A.~Makanju, S.~Brooks, A.~N. Zincir-Heywood, and E.~E. Milios.
+\newblock Logview: Visualizing event log clusters.
+\newblock In {\em Privacy, Security and Trust, 2008. PST'08. Sixth Annual
+  Conference on}, pp. 99--108. IEEE, 2008.
+
+\bibitem{monroe2013temporal}
+M.~Monroe, R.~Lan, H.~Lee, C.~Plaisant, and B.~Shneiderman.
+\newblock Temporal event sequence simplification.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  19(12):2227--2236, 2013.
+
+\bibitem{navlakha2008graph}
+S.~Navlakha, R.~Rastogi, and N.~Shrivastava.
+\newblock Graph summarization with bounded error.
+\newblock In {\em Proceedings of the 2008 ACM SIGMOD international conference
+  on Management of data}, pp. 419--432. ACM, 2008.
+
+\bibitem{perer2013data}
+A.~Perer and D.~Gotz.
+\newblock Data-driven exploration of care plans for patients.
+\newblock In {\em CHI'13 Extended Abstracts on Human Factors in Computing
+  Systems}, pp. 439--444. ACM, 2013.
+
+\bibitem{perer2014frequence}
+A.~Perer and F.~Wang.
+\newblock Frequence: interactive mining and visualization of temporal frequent
+  event sequences.
+\newblock In {\em Proceedings of the 19th international conference on
+  Intelligent User Interfaces}, pp. 153--162. ACM, 2014.
+
+\bibitem{plaisant1996lifelines}
+C.~Plaisant, B.~Milash, A.~Rose, S.~Widoff, and B.~Shneiderman.
+\newblock Lifelines: visualizing personal histories.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, pp. 221--227. ACM, 1996.
+
+\bibitem{plaisant2016tasks}
+C.~Plaisant and B.~Shneiderman.
+\newblock The diversity of data and tasks in event analytics.
+\newblock In {\em Proceedings of the IEEE VIS 2016 Workshop on Temporal \&
+  Sequential Event Analysis}, 2016.
+
+\bibitem{polack2015timestitch}
+P.~J. Polack, S.-T. Chen, M.~Kahng, M.~Sharmin, and D.~H. Chau.
+\newblock Timestitch: Interactive multi-focus cohort discovery and comparison.
+\newblock In {\em Visual Analytics Science and Technology (VAST), 2015 IEEE
+  Conference on}, pp. 209--210. IEEE, 2015.
+
+\bibitem{robinson2017design}
+A.~C. Robinson, D.~J. Peuquet, S.~Pezanowski, F.~A. Hardisty, and B.~Swedberg.
+\newblock Design and evaluation of a geovisual analytics system for uncovering
+  patterns in spatio-temporal event data.
+\newblock {\em Cartography and Geographic Information Science}, 44(3):216--228,
+  2017.
+
+\bibitem{ruddle2016methods}
+R.~A. Ruddle, J.~Bernard, T.~May, H.~L{\"u}cke-Tieke, and J.~Kohlhammer.
+\newblock Methods and a research agenda for the evaluation of event sequence
+  visualization techniques.
+\newblock In {\em Proceedings of the IEEE VIS 2016 Workshop on Temporal \&
+  Sequential Event Analysis.} Leeds, 2016.
+
+\bibitem{salomon2010handbook}
+D.~Salomon and G.~Motta.
+\newblock {\em Handbook of data compression}.
+\newblock Springer Science \& Business Media, 2010.
+
+\bibitem{santos2009use}
+J.~M. Santos and M.~Embrechts.
+\newblock On the use of the adjusted rand index as a metric for evaluating
+  supervised classification.
+\newblock In {\em International Conference on Artificial Neural Networks}, pp.
+  175--184. Springer, 2009.
+
+\bibitem{shen2010trail}
+Z.~Shen and N.~Sundaresan.
+\newblock Trail explorer: Understanding user experience in webpage flows.
+\newblock {\em IEEE VisWeek Discovery Exhibition}, pp. 7--8, 2010.
+
+\bibitem{shen2012visual}
+Z.~Shen, J.~Wei, N.~Sundaresan, and K.-L. Ma.
+\newblock Visual analysis of massive web session data.
+\newblock In {\em Large Data Analysis and Visualization (LDAV), 2012 IEEE
+  Symposium on}, pp. 65--72. IEEE, 2012.
+
+\bibitem{shneiderman1996eyes}
+B.~Shneiderman.
+\newblock The eyes have it: A task by data type taxonomy for information
+  visualizations.
+\newblock In {\em Visual Languages, 1996. Proceedings., IEEE Symposium on}, pp.
+  336--343. IEEE, 1996.
+
+\bibitem{shneiderman2015sharpening}
+B.~Shneiderman and C.~Plaisant.
+\newblock Sharpening analytic focus to cope with big data volume and variety.
+\newblock {\em IEEE computer graphics and applications}, 35(3):10--14, 2015.
+
+\bibitem{stasko2000focus+}
+J.~Stasko and E.~Zhang.
+\newblock Focus+ context display and navigation techniques for enhancing
+  radial, space-filling hierarchy visualizations.
+\newblock In {\em Information Visualization, 2000. InfoVis 2000. IEEE Symposium
+  on}, pp. 57--65. IEEE, 2000.
+
+\bibitem{veras2017optimizing}
+R.~Veras and C.~Collins.
+\newblock Optimizing hierarchical visualizations with the minimum description
+  length principle.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  23(1):631--640, 2017.
+
+\bibitem{collins2017mdl}
+R.~Veras and C.~Collins.
+\newblock Optimizing hierarchical visualizations with the minimum description
+  length principle.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  23(1):631--640, Jan 2017.
+
+\bibitem{vrotsou2009activitree}
+K.~Vrotsou, J.~Johansson, and M.~Cooper.
+\newblock Activitree: interactive visual exploration of sequences in
+  event-based data using graph similarity.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  15(6):945--952, 2009.
+
+\bibitem{wang2016unsupervised}
+G.~Wang, X.~Zhang, S.~Tang, H.~Zheng, and B.~Y. Zhao.
+\newblock Unsupervised clickstream clustering for user behavior analysis.
+\newblock In {\em Proceedings of the 2016 CHI Conference on Human Factors in
+  Computing Systems}, pp. 225--236. ACM, 2016.
+
+\bibitem{wang2007frequent}
+J.~Wang, J.~Han, and C.~Li.
+\newblock Frequent closed sequence mining without candidate maintenance.
+\newblock {\em IEEE Transactions on Knowledge and Data Engineering}, 19(8),
+  2007.
+
+\bibitem{wang2008aligning}
+T.~D. Wang, C.~Plaisant, A.~J. Quinn, R.~Stanchak, S.~Murphy, and
+  B.~Shneiderman.
+\newblock Aligning temporal data by sentinel events: discovering patterns in
+  electronic health records.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, pp. 457--466. ACM, 2008.
+
+\bibitem{wang2009temporal}
+T.~D. Wang, C.~Plaisant, B.~Shneiderman, N.~Spring, D.~Roseman, G.~Marchand,
+  V.~Mukherjee, and M.~Smith.
+\newblock Temporal summaries: Supporting temporal categorical searching,
+  aggregation and comparison.
+\newblock {\em IEEE transactions on visualization and computer graphics},
+  15(6), 2009.
+
+\bibitem{wanner2014state}
+F.~Wanner, A.~Stoffel, D.~J{\"a}ckle, B.~C. Kwon, A.~Weiler, D.~A. Keim, K.~E.
+  Isaacs, A.~Gim{\'e}nez, I.~Jusufi, T.~Gamblin, et~al.
+\newblock State-of-the-art report of visual analysis for event detection in
+  text data streams.
+\newblock In {\em Computer Graphics Forum}, vol.~33, 2014.
+
+\bibitem{wei2012visual}
+J.~Wei, Z.~Shen, N.~Sundaresan, and K.-L. Ma.
+\newblock Visual cluster exploration of web clickstream data.
+\newblock In {\em Visual Analytics Science and Technology (VAST), 2012 IEEE
+  Conference on}, pp. 3--12. IEEE, 2012.
+
+\bibitem{wongsuphasawat2012outflow}
+K.~Wongsuphasawat and D.~Gotz.
+\newblock Exploring flow, factors, and outcomes of temporal event sequences
+  with the outflow visualization.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  18(12):2659--2668, Dec 2012.
+
+\bibitem{wongsuphasawat2011lifeflow}
+K.~Wongsuphasawat, J.~A. Guerra~G{\'o}mez, C.~Plaisant, T.~D. Wang,
+  M.~Taieb-Maimon, and B.~Shneiderman.
+\newblock Lifeflow: visualizing an overview of event sequences.
+\newblock In {\em Proceedings of the SIGCHI conference on human factors in
+  computing systems}, pp. 1747--1756. ACM, 2011.
+
+\bibitem{wongsuphasawat2009finding}
+K.~Wongsuphasawat and B.~Shneiderman.
+\newblock Finding comparable temporal categorical records: A similarity measure
+  with an interactive visualization.
+\newblock In {\em Visual Analytics Science and Technology, 2009. VAST 2009.
+  IEEE Symposium on}, pp. 27--34. IEEE, 2009.
+
+\bibitem{wood2015visualizing}
+J.~Wood.
+\newblock Visualizing personal progress in participatory sports cycling events.
+\newblock {\em IEEE Computer Graphics and Applications}, 35(4):73--81, 2015.
+
+\bibitem{zgraggen2015s}
+E.~Zgraggen, S.~M. Drucker, D.~Fisher, and R.~Deline.
+\newblock (s{\(\vert\)}qu)eries: Visual regular expressions for querying and
+  exploring event sequences.
+\newblock In {\em Proceedings of the 33rd Annual {ACM} Conference on Human
+  Factors in Computing Systems, {CHI} 2015, Seoul, Republic of Korea, April
+  18-23, 2015}, pp. 2683--2692, 2015.
+
+\bibitem{zhao2013timeslice}
+J.~Zhao, C.~Collins, F.~Chevalier, and R.~Balakrishnan.
+\newblock Interactive exploration of implicit and explicit relations in faceted
+  datasets.
+\newblock {\em IEEE Transactions on Visualization and Computer Graphics},
+  19(12):2080--2089, 2013.
+
+\bibitem{zhao2015matrixwave}
+J.~Zhao, Z.~Liu, M.~Dontcheva, A.~Hertzmann, and A.~Wilson.
+\newblock Matrixwave: Visual comparison of event sequence data.
+\newblock In {\em Proceedings of the 33rd Annual ACM Conference on Human
+  Factors in Computing Systems}, pp. 259--268. ACM, 2015.
+
+\end{thebibliography}

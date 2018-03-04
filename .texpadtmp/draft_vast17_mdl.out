@@ -1,0 +1,24 @@
+\BOOKMARK [1][]{section.2}{Introduction}{}% 1
+\BOOKMARK [1][]{section.4}{Related Work}{}% 2
+\BOOKMARK [2][]{subsection.5}{Event Sequence Visualization}{section.4}% 3
+\BOOKMARK [2][]{subsection.6}{Event Sequence Mining and Visualization}{section.4}% 4
+\BOOKMARK [1][]{section.8}{MDL for Event Sequences}{}% 5
+\BOOKMARK [2][]{subsection.9}{A Generic Method to Summarize Event Sequences}{section.8}% 6
+\BOOKMARK [2][]{subsection.10}{The MDL Principle}{section.8}% 7
+\BOOKMARK [2][]{subsection.11}{Denotations and Formal Problem Definition}{section.8}% 8
+\BOOKMARK [1][]{section.16}{Computing MDL Representation}{}% 9
+\BOOKMARK [2][]{subsection.17}{Basic Algorithm}{section.16}% 10
+\BOOKMARK [2][]{subsection.58}{Speedup with Locality Sensitive Hashing \(LSH\)}{section.16}% 11
+\BOOKMARK [2][]{subsection.61}{Soft Pattern Matching}{section.16}% 12
+\BOOKMARK [1][]{section.62}{The Visual Analytics System}{}% 13
+\BOOKMARK [2][]{subsection.63}{Analysis Tasks}{section.62}% 14
+\BOOKMARK [2][]{subsection.64}{Event Filter}{section.62}% 15
+\BOOKMARK [2][]{subsection.65}{Summary View}{section.62}% 16
+\BOOKMARK [2][]{subsection.66}{Sequence View}{section.62}% 17
+\BOOKMARK [2][]{subsection.67}{User Interaction}{section.62}% 18
+\BOOKMARK [1][]{section.69}{Example Usage Scenarios}{}% 19
+\BOOKMARK [2][]{subsection.70}{Vehicle Fault Analysis for Predictive Diagnostics}{section.69}% 20
+\BOOKMARK [2][]{subsection.72}{Application Log Analysis for UI Design Optimization}{section.69}% 21
+\BOOKMARK [1][]{section.74}{Expert Interview}{}% 22
+\BOOKMARK [1][]{section.75}{Limitations and Future Work}{}% 23
+\BOOKMARK [1][]{section.77}{Conclusion}{}% 24

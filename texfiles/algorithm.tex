@@ -1,0 +1,176 @@
+
+\section{MDL for Event Sequences}\looseness=-1
+\label{section:mdl}
+
+%However, in many real-world applications, event sequence data is often noisy and event type can be quite diverse. It is becoming increasingly challenging to create informative and intuitive overviews for such data.
+
+A high-level overview often plays a critical role in explorative data analysis, as emphasized in the well-known \textit{visual information seeking mantra} ``overview first, zoom and filter, details on demand" \cite{shneiderman1996eyes} and manifested in the design of numerous visualization systems. For event sequence data, an overview can serve as a starting point for descriptive analysis \cite{plaisant2016tasks} and help users identify interesting patterns or subsets of data that are worth further exploration. \looseness=-1
+
+\subsection{A Generic Method to Summarize Event Sequences}\looseness=-1
+
+Our approach to visually summarize multiple event sequences is based on a two-part representation of the original data. The two-part representation consists of a set of sequential patterns and a set of corrections. Each event sequence is mapped to a pattern and the corrections specify the edits needed to transform the pattern to the original sequence. The edits may include insertion or deletion of events from the pattern. Fig.~\ref{fig:mdl_representation} gives an example. It shows six event sequences $\{S_1, S_2, ..., S_6\}$ together with the corresponding patterns and corrections. There are two sequential patterns $P_1$ and $P_2$. The original sequences can be reconstructed from either $P_1$ or $P_2$ by removing (-) or adding (+) events. For instance, $S_2$ can be recovered from $P_1$ by adding event A while $S_3$ can be recovered from $P_1$ by adding event E. $S_4$ can be recovered from pattern $P_2$ by removing event E and inserting event C. $S_1$ is exactly the same as pattern $P_1$, therefore no correction is needed. \looseness=-1
+
+The intuition of this two-part representation is to exploit the similarity of event sequences and identify a set of sequential patterns that can give a concise visual summary of the data. In the example in Fig.~\ref{fig:mdl_representation}, $P_1$ and $P_2$ can roughly characterize the six sequences by representing $\{S_1, S_2, S_3\}$ and $\{S_4, S_5, S_6\}$ respectively. This is common in many application scenarios. For example, a series of interdependent faults can happen in the same sequential manner in multiple vehicles. Visitors of a commerce website may follow a similar sequence of pages to complete their orders. \looseness=-1
+
+The corrections part, on the other hand, specifies the information loss if the original data is visually represented by the sequential patterns. To reduce information loss, more elaborated patterns can be introduced. For example, in Fig.~\ref{fig:mdl_representation}, the information loss can be reduced by mapping $S_4$ to a new pattern [A, B, C] instead of $P_2$. However, such changes can increase the visual complexity of the overview with more patterns to be displayed. The extreme case is when each individual sequence is treated as a pattern: there is no information loss, however severe visual clutter could occur when plotting all the sequences in a single visualization, making it much more challenging to identify high-level patterns. Essentially, we need to consider a trade-off between the readability of the visualization and the completeness of the information communicated through it.\looseness=-1
+
+\subsection{The MDL Principle}\looseness=-1
+
+We introduce the MDL principle~\cite{grunwald2004tutorial, grunwald2007minimum} to identify a set of sequential patterns for an overview of the data while balancing the information loss in it. \revision{MDL is a well known information criterion for statistical model selection. It has been adopted for constructing optimized layout of hierarchical visualizations~\cite{veras2017optimizing}.} The MDL principle basically states that the best model for a dataset results in minimized description length of it. Like most authors, we apply the more `practical' or crude version of MDL instead of the ideal MDL. The ideal MDL tries to find the shortest program in a general-purpose computer language that can print the data. On the other hand, in the crude version, the description length of a dataset is composed of two parts: (a) the encoding of the model $L(\mathscr{M})$ and (b) the encoding of the data with the help of the model $L(\mathscr{D}|\mathscr{M})$. The best model $\hat{\mathscr{M}}$ should minimize the total description length, which is $L(\mathscr{M}) + L(\mathscr{D}|\mathscr{M})$. \looseness=-1
+
+For event sequences, we consider the sequential patterns as the model. The original sequences are coded by specifying the edits to the corresponding patterns. The total description length is the sum of the pattern lengths and the corrections length. The best set of sequential patterns that represents the original data should minimize the sum. \looseness=-1
+
+The MDL principle applied in this scenario is directly connected to the goal we intend to achieve in the overview. Simplifying the overview which shows the sequential patterns corresponds to minimizing $L(\mathscr{M})$, whereas $L(\mathscr{D}|\mathscr{M})$, the corrections length, is added to the objective function to penalize the information loss in it. \looseness=-1
+
+\subsection{Denotations and Formal Problem Definition}\looseness=-1
+
+Now we start to introduce the denotations and formally define the description length of the two-part representation. An event sequence is an ordered list of events $S=[e_1, e_2, ..., e_n]$ where $e_i \in \Omega$, an event alphabet. Given a set of event sequences $\mathscr{S} = \{S_1, S_2, ..., S_m\}$, the goal is to identify a set of patterns $\mathscr{P} = \{P|P=[e_1, e_2, ... , e_l]\}$ and a mapping $f:\mathscr{S}\rightarrow \mathscr{P}$ from the event sequences to the patterns that can minimize the total description length: \looseness=-1
+
+\begin{equation}
+	L(\mathscr{P},f) = \sum_{P \in \mathscr{P}}L(P) + \sum_{S \in \mathscr{S}}L(S|f(S))
+\label{eq:MDL_0}
+\end{equation}
+
+In this equation, $L(P)$ is the description length of pattern $P$ and $L(S|f(S))$ is the description length of $S$ given its pattern $f(S)$. Considering that 1) a pattern can be described by simply listing the events in it\footnote{In this work, minimizing the description length is not an end goal, but a means to extract meaningful sequential patterns for a succinct visual display. Therefore we do not use compression schemes such as Huffman coding \cite{salomon2010handbook} to shorten the code lengths for the events and we consider the events are described with a constant length code. Same for encoding the edits.} and 2) an edit can be fully specified by the position and the event involved and its description length can be roughly treated as a constant, Eqn.~\ref{eq:MDL_0} can be rewritten as: \looseness=-1
+
+\begin{equation}
+	L(\mathscr{P},f) = \sum_{P \in \mathscr{P}}len(P) + \alpha \sum_{S \in \mathscr{S}}\|edits(S,f(S))\| + \lambda\|\mathscr{P}\|
+\label{eq:MDL_1}	
+\end{equation}
+
+where $len(P)$ is the number of events in the pattern and $edits(S,f(S))$ is a set of edits that can transform $f(S)$ to $S$. We further introduce the parameter $\alpha$ in Eqn.~\ref{eq:MDL_1} to control the importance of minimizing information loss over reducing visual clutter in the overview, following the practice used by Veras and Collins \cite{collins2017mdl}. The third term with the parameter $\lambda$ is added to directly control the total number of patterns. Increasing $\lambda$ will reduce the number of patterns in the optimized result. \revision{Therefore the scalability of the overview can be improved by setting $\lambda$ properly.} \looseness=-1
+
+The mapping $f$ clusters the event sequences: sequences mapped to the same pattern can be considered as in the same cluster. We denote a cluster as a tuple $c = (P, G)$ where $G = \{S|S \in \mathscr{S} \wedge f(S) = P\}$ is the set of sequences mapped to pattern $P$. We denote the set of tuples for all the clusters as $\mathscr{C} = \{(P_1, G_1), (P_2, G_2), ..., (P_k, G_k)\}$, where $\{G_1, G_2, ..., G_k\}$ forms a partition of $\mathscr{S}$. Therefore finding $\hat{f}$ and $\hat{\mathscr{P}}$ that minimize $L(\mathscr{P},f)$ is equivalent to finding $\hat{\mathscr{C}}$ that minimize $L(\mathscr{C})$: \looseness=-1
+
+\begin{equation}
+	L(\mathscr{C}) = \sum_{(P, G) \in \mathscr{C}}len(P) + \alpha \sum_{(P, G) \in \mathscr{C}} \sum_{S \in G}\|edits(S, P)\| + \lambda\|\mathscr{C}\|
+\label{eq:MDL_2}	
+\end{equation}
+
+To summarize, our goal is to identify a partition/grouping of the sequences and a representative pattern for each group that can minimize the total description length. Conceptually it seems to be similar to sequence clustering algorithms. However the other methods do not follow an information-theoretic approach. Furthermore, the patterns can give an interpretable coarse-level summary of the original data, which is not possible with the existing sequence clustering techniques. \looseness=-1
+
+\section{Computing MDL Representation}\looseness=-1
+\label{section:algorithm}
+
+We introduce the algorithm to identify a grouping of the sequences and a representative pattern for each group that minimize $L(\mathscr{C})$ in Eqn.~\ref{eq:MDL_2}. 
+%We then introduce a speedup strategy and evaluate its performance. In the end we demonstrate that this general framework can also support other editing operations such as swapping adjacent events. \looseness=-1
+
+\subsection{Basic Algorithm}\looseness=-1
+
+We now present our first algorithm called \textit{MinDL}. Since the optimization problem itself entails a rather large search space, we adopt a heuristic approach using a bottom up strategy. Initially, each sequence starts in its own cluster and is treated as a sequential pattern by itself. Starting from that, we iteratively merge pairs of clusters and compute the representative sequential patterns for the new clusters. The merges are determined in a greedy manner: the algorithm always choose to combine the pair that leads to the maximum description length reduction in each iteration. The algorithm stops when it can no longer find a pair to further reduce $L$. \looseness=-1
+  
+\begin{algorithm}
+ \KwIn{sequences $\mathscr{S}=\{S_1,S_2,...,S_n\}$}
+ \KwOut{pattern and cluster tuples $\mathscr{C}=\{(P_1,G_1),(P_2,G_2),...,(P_k,G_k)\}$}
+% \BlankLine
+ \tcc{Initialization phase}
+% $\mathscr{H}=\{(S_1,\{S_1\}),(S_2,\{S_2\}),...,(S_n,\{S_n\})\}$\; 
+ $\mathscr{C}=\{(P,G)|P=S, G=\{S\} \text{ for all } S \in \mathscr{S}\}$\; 
+ PriorityQueue $Q=\emptyset$\;
+ \For{ all pairs $ c_i, c_j \in \mathscr{C}$ and $i\neq j$}{
+ 	$\Delta L, c^\ast = Merge(c_i,c_j)$\;
+ 	\If{$\Delta L>0$} {
+ 		insert $(\Delta L, c^\ast, c_i, c_j)$ into $Q$\;
+ 	}
+ }
+% \BlankLine
+ \tcc{Iterative merging phase}
+ \While{$Q\neq\emptyset$}{
+  retrieve $(\Delta L, c^\ast, c_i, c_j)$ from $Q$ with the largest $\Delta L$\;
+  $c_{new}$ = $c^\ast$\;
+  remove $c_i, c_j$ from $\mathscr{C}$, add $c_{new}$ to $\mathscr{C}$\;
+  remove all pairs containing $c_i$ or $c_j$ from $Q$\;
+  \For{$c\in \mathscr{C}-c_{new}$}{
+   	$\Delta L, c^{\ast} = Merge(c, c_{new})$\;
+ 	\If{$\Delta L>0$} {
+ 		insert $(\Delta L, c^\ast, c, c_{new})$ into $Q$\;
+ 	}
+  }
+ }
+ \Return $\mathscr{C}$
+ \caption{MinDL}
+ \label{algorithm:greedy_mindl}
+\end{algorithm}\looseness=-1  
+
+\textit{MinDL} is described formally in Algorithm~\ref{algorithm:greedy_mindl}. The algorithm is subdivided into two phases - \textit{Initialization} and \textit{Iterative merging}. In the \textit{Initialization} phase, $\mathscr{C}$ is set to contain all the sequences in $\mathscr{S}$ as individual clusters. The algorithm then computes the description length reduction $\Delta L$ for all the pairs in $\mathscr{C}$ and uses a standard priority queue $Q$ to store the pairs with a positive $\Delta L$. With that the algorithm can efficiently retrieve the pair with the maximum $\Delta L$ in constant time. The subroutine \textit{Merge} in line 4 returns not only $\Delta L$ by merging $c_i$ and $c_j$, but also $c^\ast=(P^\ast, G_i \cup G_j )$ where $P^\ast$ is the optimal sequential pattern for the merged group which minimizes the description length for the sequences in $G_i \cup G_j$. $c^\ast$ is stored together with $\Delta L$ and $(c_i, c_j)$ in $Q$ to avoid recomputation. \looseness=-1
+
+In the \textit{Iterative merging} phase, the algorithm picks the pair $(c_i, c_j)$ with the maximum $\Delta L$ from $Q$. It updates $\mathscr{C}$ by removing $c_i$, $c_j$ and inserting $c^\ast$. $Q$ is updated by adding new pairs of clusters containing $c^\ast$ with a positive $\Delta L$. This process is repeated until $Q$ is empty. The remaining tuples in $\mathscr{C}$ specify a grouping of the sequences along with the representative patterns which give an optimized description length of the original data. \looseness=-1
+
+The core subroutine in \textit{MinDL} is \textit{Merge}, which appears in line 4 and line 15. It is described in Algorithm.~\ref{algorithm:merge}. \textit{Merge} calculates the cost reduction $\Delta L$ when combining a pair of clusters $c_i=(P_i,G_i)$ and $c_j=(P_j,G_j)$. It also returns the sequential pattern $P^\ast$ after merging. The algorithm initializes $P^\ast$ as the Longest Common Subsequence (LCS) of $P_i$ and $P_j$ and iteratively add the remaining events in $P_i$ and $P_j$ to it, starting from those that appear most frequently in $G_i$ and $G_j$. The iteration stops when $\Delta L$ no longer increases or is less than 0. The intuition behind this procedure is that the pattern $P^\ast$ should be a mixture of $P_i$ and $P_j$. Starting from the LCS of $P_i$ and $P_j$ can greatly reduce the efforts needed to build the sequential pattern $P^\ast$ from scratch. \looseness=-1
+
+\begin{algorithm}
+	\KwIn{$c_i=(P_i,G_i)$,$c_j=(P_j,G_j)$}
+	\KwOut{$\Delta L$ and $c^\ast=(P^\ast, G_i \cup G_j)$ by merging $c_i$ and $c_j$}
+% 	\BlankLine
+ 	\tcc{Initialization phase}
+	init pattern $P^\ast = P =LCS(P_i,P_j)$\;
+	candidate events $E_c= P_i - P \cup P_j - P$\;
+	sort $E_c$ by frequency in desc order\;
+	$\Delta L = -1$\;
+% 	\BlankLine
+ 	\tcc{Pattern buildup phase}
+	\For{$e$ in $E_c$}{
+		$P=Add(P, e)$\;
+		$\Delta L' = len(P_i) + len(P_j) - len(P)  + \alpha \sum_{S \in G_i}edits(S, P_i) + \alpha \sum_{S \in G_j}edits(S, P_j) - \alpha \sum_{S \in G_i\cup G_j}edits(S, P) + \lambda$\;
+		\eIf{$\Delta L'<0$ or $\Delta L'<\Delta L$}{
+			break\;
+		}
+		{
+		$\Delta L = \Delta L'$,	$P^\ast = P$\;
+		}
+	}
+	\Return $\Delta L,c^\ast=(P^\ast, G_i \cup G_j)$
+	\caption{Merge}
+	\label{algorithm:merge}
+\end{algorithm}\looseness=-1  
+
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.90\linewidth]{pictures/performance2}
+	\caption{Algorithm performance comparison on two real-world datasets, \revision{vehicle fault sequences (VFS) and Agavue\cite{agavue}}. We sample the Agavue dataset to create test data with different number of sequences. We run algorithms on a PC with 2.5GHz Intel dual-core i5 CPU with 4GB RAM. The algorithms are implemented in Python except that HAC in scikit-learn and weighted LSH in datasketch use external C libraries. 
+		%It can be observed that we can reduce 95\% to 99\% running time of \textit{MinDL} with the help of LSH.\looseness=-1
+		}
+	\label{fig:performance}
+\end{figure*}
+\looseness=-1
+
+The function $edits$ in line 7 calculates the \textit{minimum} number of edits that can transform a pattern $P$ to a sequence $S$. Different types of edits can be supported in the algorithm, given that the minimum number of edits are computed accordingly. For example, if we allow missing or additional events in the pattern, the minimum number of edits can be obtained by computing the LCS distance between $P$ and $S$. Adding event substitution into the available types of edits, we get Levenstein distance. The algorithm can support even more editing types such as swapping the positions of adjacent events. In this paper we mostly consider event insertion and deletion as the available editing operations. In Section 4.3 we use an example to illustrate how swapping adjacent events can be supported in the same framework.\looseness=-1
+
+\subsection{Speedup with Locality Sensitive Hashing (LSH)}\looseness=-1
+
+An analysis on the time complexity of \textit{MinDL} shows that it can be quite time consuming even for a moderate amount of data. Given $n$ event sequences, the \textit{MinDL} algorithm runs the subroutine \textit{Merge} for $O(n^2)$ times to calculate $\Delta L$ for all pairs of clusters. The subroutine \textit{Merge} itself has a time complexity of $O(kmd^2)$, where $m$ is the number of sequences in the combined cluster, $k$ is the number of iterations in the pattern buildup phase (line 5-13 in Algorithm.~\ref{algorithm:merge}) and $d$ is the average length of the sequences. We assume the minimum number of edits can be computed efficiently through dynamic programming, hence the time complexity of computing $edits$ is $O(d^2)$.\looseness=-1
+
+To tackle this challenge, we propose a fast randomized approximation algorithm utilizing \textit{Locality Sensitive Hashing (LSH)}~\cite{leskovec2014mining}. The intuition of this approach is that pairs of sequences/patterns which share very few common events or no common event at all (regardless of the order) can be skipped when searching for candidate pairs to merge. If we can design a method that can quickly filter out such pairs, the times of calling function \textit{Merge}, the most time consuming routine, can be significantly reduced.\looseness=-1
+
+Based on this observation, we integrate weighted LSH \cite{ioffe2010improved} into the \textit{MinDL} algorithm. Weighted LSH takes a predefined threshold $th$ within the range $(0.0, 1.0)$ as a parameter. If two multisets have a weighted Jaccard similarity larger than $th$, they will have the same hash value with a sufficiently high probability. We use weighted LSH to quickly identify pairs of sequences/patterns with similar sets of events regardless of their exact order. This allows us to prioritize the clusters when searching for candidates to merge.\looseness=-1
+
+When applying LSH, a higher threshold $th$ can filter out more candidates and make the algorithm faster. However, the risk of missing potential candidates also becomes higher. We follow the strategy proposed by Koga et al. \cite{Koga2007} and run \textit{MinDL} for multiple iterations while gradually decreasing $th$. In the first few runs, we use higher $th$ so each time fewer pairs need to be checked in \textit{MinDL}. To ensure no possible merge is missed due to the usage of LSH, we gradually decrease the threshold in the later runs such that more candidate pairs could be considered. Since the number of clusters decreases quickly during the first few runs, this method still can significantly reduce the running time. In this work, the threshold setting is guided by the experimental result. The \textit{MinDL+LSH} algorithm is described in detail in the Appendix.\looseness=-1
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.9\linewidth]{pictures/costcurve}
+	\caption{Change of the description length ($L(\mathscr{C})$) over time as \textit{MinDL} and \textit{MinDL+LSH} progress, tested on the Agavue dataset. $L(\mathscr{C})$ is normalized with its initial value when each sequence is treated as an individual pattern. \looseness=-1}
+	\label{fig:costcurve}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\linewidth]{pictures/swap}
+	\caption{An example sequence cluster where events may have different orders when compared to the pattern. By adding transposition operation in possible edits, the algorithm allows small perturbations in event order.}
+	\label{fig:swap}
+\end{figure}
+
+We conduct experiments to evaluate the effectiveness of the speedup strategy on two datasets, \revision{vehicle fault sequences (VFS) and Agavue\cite{agavue}.} \revision{Detailed information of the two datasets are described in Section.~6.} \looseness=-1
+%The algorithms run on a PC with 2.5GHz Intel dual-core i5 CPU with 4GB RAM. The algorithms are implemented in Python except that the weighted LSH library uses an external library in C. 
+Some basic statistics about the datasets and the experimental results are displayed in Fig.~\ref{fig:performance}. It can be observed that we can reduce 95\% to 99\% running time of \textit{MinDL} with the help of LSH. \revision{We also test the running time of a standard clustering algorithm \textit{Hierarchical Agglomerative Clustering (HAC)} and a SPM algorithm~\cite{wang2007frequent}. For fair comparison, we use editing distance as the metric in the HAC algorithm, and use the minimum cluster size in our \textit{MinDL} algorithm as the support threshold in the SPM algorithm. From the result, we can observe that \textit{MinDL+LSH} is much faster than both \textit{HAC} and \textit{SPM}, especially when number of sequences becomes larger.}\looseness=-1
+
+Fig.~\ref{fig:costcurve} compares \textit{MinDL} and \textit{MinDL+LSH}. It  shows how the total description length $L$ decreases over time as the two algorithms progress. Besides the dramatic difference in the decreasing speed, we also observe that the resulted description length is similar for the two algorithms. This means that the two algorithms can achieve similar optimization results. To further validate this conclusion, we also compare the clustering results before and after embedding LSH with the Adjusted Rand Index (ARI). ARI is a common metric to compare clustering results. It ranges from -1 to 1 where 0 means random clustering and 1 means identical results. An ARI larger than 0.5 means that the results are very similar~\cite{santos2009use}. Fig.~\ref{fig:performance} shows that all the results have an ARI larger than 0.5. Therefore, we can safely conclude that adding LSH does not have significant negative effect on the clustering results.\looseness=-1
+
+\subsection{Soft Pattern Matching}\looseness=-1  
+
+In the algorithm, the individual sequences may deviate from the patterns with missing or additional events, given that they do not add too much to the corrections part. Therefore the method is quite robust to noises, common in real-world data. The algorithm is also generic and can support more editing operations such as swapping the positions of adjacent events, thus allowing small perturbations in event order. Fig.~\ref{fig:swap} shows an example when we include insertion, deletion and transposition between two successive events as the possible edits. In the algorithm, the minimum number of edits can be determined by following the method to calculate the Damerau-Levenshtein distance~\cite{brill2000improved}. Fig.~\ref{fig:swap} shows that the events in the patterns appear in the individual sequences in different order. \looseness=-1
+
+
+
+
+
