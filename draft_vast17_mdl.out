@@ -3,3 +3,11 @@
 \BOOKMARK [2][]{subsection.5}{Event Sequence Visualization}{section.4}% 3
 \BOOKMARK [2][]{subsection.6}{Event Sequence Summarization}{section.4}% 4
 \BOOKMARK [2][]{subsection.7}{Sequence Stage Analysis}{section.4}% 5
+\BOOKMARK [1][]{section.8}{MDL for Event Sequences}{}% 6
+\BOOKMARK [2][]{subsection.9}{A Generic Method to Summarize Event Sequences}{section.8}% 7
+\BOOKMARK [2][]{subsection.10}{The MDL Principle}{section.8}% 8
+\BOOKMARK [2][]{subsection.11}{Denotations and Formal Problem Definition}{section.8}% 9
+\BOOKMARK [1][]{section.16}{Computing MDL Representation}{}% 10
+\BOOKMARK [2][]{subsection.17}{Basic Algorithm}{section.16}% 11
+\BOOKMARK [2][]{subsection.58}{Speedup with Locality Sensitive Hashing \(LSH\)}{section.16}% 12
+\BOOKMARK [2][]{subsection.61}{Soft Pattern Matching}{section.16}% 13

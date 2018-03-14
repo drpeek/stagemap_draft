@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.1)  1 MAR 2018 22:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.1)  14 MAR 2018 14:10
 entering extended mode
 **draft_vast17_mdl.tex
 (D:\Vis\sequencesummary\draft\draft_vast17_mdl.tex
@@ -720,13 +720,191 @@ File: omsptm.fd
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
-) [2]
-(D:\Vis\sequencesummary\draft\draft_vast17_mdl.bbl
+ [2])
+(D:\Vis\sequencesummary\draft\texfiles/algorithm.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+
+
+LaTeX Warning: Citation `shneiderman1996eyes' on page 3 undefined on input line
+ 7.
+
+
+LaTeX Warning: Citation `plaisant2016tasks' on page 3 undefined on input line 7
+.
+
+
+LaTeX Warning: Reference `fig:mdl_representation' on page 3 undefined on input 
+line 11.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 11.
+
+LaTeX Warning: Reference `fig:mdl_representation' on page 3 undefined on input 
+line 13.
+
+
+LaTeX Warning: Reference `fig:mdl_representation' on page 3 undefined on input 
+line 15.
+
+
+LaTeX Warning: Citation `grunwald2004tutorial' on page 3 undefined on input lin
+e 19.
+
+
+LaTeX Warning: Citation `grunwald2007minimum' on page 3 undefined on input line
+ 19.
+
+
+LaTeX Warning: Citation `veras2017optimizing' on page 3 undefined on input line
+ 19.
+
+LaTeX Font Info:    Try loading font information for U+eus on input line 19.
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\amsfonts\ueus.fd"
+File: ueus.fd 2009/06/22 v3.00 Euler Script
+)
+("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\microtype\mt-eus.cfg"
+File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
+)
+
+LaTeX Warning: Citation `salomon2010handbook' on page 3 undefined on input line
+ 34.
+
+
+LaTeX Warning: Reference `eq:MDL_0' on page 3 undefined on input line 34.
+
+
+LaTeX Warning: Reference `eq:MDL_1' on page 3 undefined on input line 41.
+
+
+LaTeX Warning: Citation `collins2017mdl' on page 3 undefined on input line 41.
+
+
+LaTeX Warning: Reference `eq:MDL_2' on page 3 undefined on input line 55.
+
+[3]
+LaTeX Font Info:    Try loading font information for OT1+txtt on input line 66.
+
+ ("D:\Program Files (x86)\CTEX\MiKTeX\tex\latex\txfonts\ot1txtt.fd"
+File: ot1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.25002> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+
+
+LaTeX Warning: Reference `algorithm:greedy_mindl' on page 4 undefined on input 
+line 95.
+
+
+LaTeX Warning: Reference `algorithm:merge' on page 4 undefined on input line 99
+.
+
+
+! LaTeX Error: File `pictures/performance2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.129 ...th=0.90\linewidth]{pictures/performance2}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.jpeg
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `agavue' on page 4 undefined on input line 132.
+
+
+LaTeX Warning: Citation `agavue' on page 4 undefined on input line 132.
+
+
+LaTeX Warning: Reference `algorithm:merge' on page 4 undefined on input line 14
+1.
+
+
+LaTeX Warning: Citation `leskovec2014mining' on page 4 undefined on input line 
+143.
+
+
+LaTeX Warning: Citation `ioffe2010improved' on page 4 undefined on input line 1
+45.
+
+
+LaTeX Warning: Citation `Koga2007' on page 4 undefined on input line 147.
+
+[4]
+
+! LaTeX Error: File `pictures/costcurve' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 ...[width=0.9\linewidth]{pictures/costcurve}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.jpeg
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 152.
+
+! LaTeX Error: File `pictures/swap' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.158 ...hics[width=0.75\linewidth]{pictures/swap}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.jpeg
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `agavue' on page 5 undefined on input line 163.
+
+
+LaTeX Warning: Reference `fig:performance' on page 5 undefined on input line 16
+5.
+
+
+LaTeX Warning: Citation `wang2007frequent' on page 5 undefined on input line 16
+5.
+
+
+LaTeX Warning: Reference `fig:costcurve' on page 5 undefined on input line 167.
+
+
+
+LaTeX Warning: Citation `santos2009use' on page 5 undefined on input line 167.
+
+
+LaTeX Warning: Reference `fig:performance' on page 5 undefined on input line 16
+7.
+
+
+LaTeX Warning: Reference `fig:swap' on page 5 undefined on input line 171.
+
+
+LaTeX Warning: Citation `brill2000improved' on page 5 undefined on input line 1
+71.
+
+
+LaTeX Warning: Reference `fig:swap' on page 5 undefined on input line 171.
+
+) [5
+
+] (D:\Vis\sequencesummary\draft\draft_vast17_mdl.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
- [3
+ [6
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
@@ -734,27 +912,48 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
 (D:\Vis\sequencesummary\draft\draft_vast17_mdl.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
-Package rerunfilecheck Info: File `draft_vast17_mdl.out' has not changed.
-(rerunfilecheck)             Checksum: 17607BA18BB5459D9D3958956F5A687D;314.
+
+
+Package rerunfilecheck Warning: File `draft_vast17_mdl.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `draft_vast17_mdl.out':
+(rerunfilecheck)             Before: 17607BA18BB5459D9D3958956F5A687D;314
+(rerunfilecheck)             After:  726DB974044FAA44E4D06BD16AA1FB0C;916.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 10829 strings out of 495354
- 157541 string characters out of 3182740
- 309953 words of memory out of 3000000
- 13526 multiletter control sequences out of 15000+200000
- 48021 words of font info for 248 fonts, out of 3000000 for 9000
+ 11165 strings out of 495354
+ 161900 string characters out of 3182740
+ 323429 words of memory out of 3000000
+ 13645 multiletter control sequences out of 15000+200000
+ 78880 words of font info for 368 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 33i,8n,35p,1424b,388s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 35i,18n,35p,1979b,562s stack positions out of 5000i,500n,10000p,200000b,50000s
 {D:/Program Files (x86)/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<D:/Progr
-am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Progra
-m Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program 
-Files (x86)/CTEX/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Program Files (
-x86)/CTEX/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Program Files (x86)/CT
-EX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on draft_vast17_mdl.pdf (3 pages, 636904 bytes).
+am Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/Progra
+m Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Program 
+Files (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/Program F
+iles (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Program Fil
+es (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/euler/eusm10.pfb><D:/Program F
+iles (x86)/CTEX/MiKTeX/fonts/type1/public/amsfonts/euler/eusm7.pfb><D:/Program 
+Files (x86)/CTEX/MiKTeX/fonts/type1/public/txfonts/txtt.pfb><D:/Program Files (
+x86)/CTEX/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><D:/Program Files (x86)/CT
+EX/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><D:/Program Files (x86)/CTEX/MiKT
+eX/fonts/type1/urw/helvetic/uhvro8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fon
+ts/type1/urw/symbol/usyr.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/ur
+w/symbol/usyr.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utm
+b8a.pfb><D:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><D
+:/Program Files (x86)/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on draft_vast17_mdl.pdf (6 pages, 728530 bytes).
 PDF statistics:
- 163 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 38451 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 276 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 54323 words of extra memory for PDF output out of 61914 (max. 10000000)
 

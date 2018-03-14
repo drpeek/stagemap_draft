@@ -55,6 +55,44 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Event Sequence Visualization}{2}{subsection.5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Event Sequence Summarization}{2}{subsection.6}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Sequence Stage Analysis}{2}{subsection.7}}
+\citation{shneiderman1996eyes}
+\citation{plaisant2016tasks}
+\citation{grunwald2004tutorial,grunwald2007minimum}
+\citation{veras2017optimizing}
+\citation{salomon2010handbook}
+\citation{collins2017mdl}
+\@writefile{toc}{\contentsline {section}{\numberline {3}MDL for Event Sequences}{3}{section.8}}
+\newlabel{section:mdl}{{3}{3}{MDL for Event Sequences\relax }{section.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}A Generic Method to Summarize Event Sequences}{3}{subsection.9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}The MDL Principle}{3}{subsection.10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Denotations and Formal Problem Definition}{3}{subsection.11}}
+\newlabel{eq:MDL_0}{{1}{3}{Denotations and Formal Problem Definition\relax }{equation.12}{}}
+\newlabel{eq:MDL_1}{{2}{3}{Denotations and Formal Problem Definition\relax }{equation.14}{}}
+\newlabel{eq:MDL_2}{{3}{3}{Denotations and Formal Problem Definition\relax }{equation.15}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Computing MDL Representation}{3}{section.16}}
+\newlabel{section:algorithm}{{4}{3}{Computing MDL Representation\relax }{section.16}{}}
+\citation{agavue}
+\citation{agavue}
+\citation{leskovec2014mining}
+\citation{ioffe2010improved}
+\citation{Koga2007}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Basic Algorithm}{4}{subsection.17}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {1}{\ignorespaces MinDL}}{4}{algocf.40}}
+\newlabel{algorithm:greedy_mindl}{{1}{4}{Basic Algorithm\relax }{algocf.40}{}}
+\@writefile{loa}{\contentsline {algocf}{\numberline {2}{\ignorespaces Merge}}{4}{algocf.56}}
+\newlabel{algorithm:merge}{{2}{4}{Basic Algorithm\relax }{algocf.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Speedup with Locality Sensitive Hashing (LSH)}{4}{subsection.58}}
+\citation{agavue}
+\citation{wang2007frequent}
+\citation{santos2009use}
+\citation{brill2000improved}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Algorithm performance comparison on two real-world datasets, \leavevmode {\color  {black}vehicle fault sequences (VFS) and Agavue\cite  {agavue}}. We sample the Agavue dataset to create test data with different number of sequences. We run algorithms on a PC with 2.5GHz Intel dual-core i5 CPU with 4GB RAM. The algorithms are implemented in Python except that HAC in scikit-learn and weighted LSH in datasketch use external C libraries. }}{5}{figure.57}}
+\newlabel{fig:performance}{{2}{5}{Algorithm performance comparison on two real-world datasets, \revision {vehicle fault sequences (VFS) and Agavue\cite {agavue}}. We sample the Agavue dataset to create test data with different number of sequences. We run algorithms on a PC with 2.5GHz Intel dual-core i5 CPU with 4GB RAM. The algorithms are implemented in Python except that HAC in scikit-learn and weighted LSH in datasketch use external C libraries}{figure.57}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Change of the description length ($L(\EuScript  {C})$) over time as \textit  {MinDL} and \textit  {MinDL+LSH} progress, tested on the Agavue dataset. $L(\EuScript  {C})$ is normalized with its initial value when each sequence is treated as an individual pattern. \looseness =-1}}{5}{figure.59}}
+\newlabel{fig:costcurve}{{3}{5}{Change of the description length ($L(\mathscr {C})$) over time as \textit {MinDL} and \textit {MinDL+LSH} progress, tested on the Agavue dataset. $L(\mathscr {C})$ is normalized with its initial value when each sequence is treated as an individual pattern. \looseness =-1\relax }{figure.59}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces An example sequence cluster where events may have different orders when compared to the pattern. By adding transposition operation in possible edits, the algorithm allows small perturbations in event order.}}{5}{figure.60}}
+\newlabel{fig:swap}{{4}{5}{An example sequence cluster where events may have different orders when compared to the pattern. By adding transposition operation in possible edits, the algorithm allows small perturbations in event order}{figure.60}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Soft Pattern Matching}{5}{subsection.61}}
 \bibstyle{abbrv-doi}
 \bibdata{references}
 \bibcite{chen2018sequence}{1}
