@@ -21,6 +21,14 @@ Sequence clustering can also aggregate similar sequences and provide an overview
 
 There are also works that generate visual summary based on extracted frequent sequential patterns. TimeStitch~\cite{polack2015timestitch} applies sequential pattern mining models to medical care data analysis and helps users to discover, construct and compare cohorts. Both Frequence~\cite{perer2014frequence} and Peekquence~\cite{kwon2016peekquence} use the frequent pattern mining algorithm and directly visualize mined patterns to help users analyze the data. Furthermore, a three-stage analytic pipeline~\cite{liu2017patterns} has been proposed to identify and prune mined sequential patterns. Recently, Chen et al.~\cite{chen2018sequence} propose a two-part representation to visualize both the sequential patterns and individual variances with the help of Minimum Description Length principle. In this paper, the concept of the progression stage is similar to the sequential pattern. However, existing works do not consider the sequential relations among stages which limits the flexibility of presenting the inherit data structure. 
 
+\begin{figure*}
+	\centering
+	\includegraphics[width=\linewidth]{pictures/summary}
+	\caption{stage progression summary 
+	}
+	\label{fig:summary}
+\end{figure*}
+
 \subsection{Sequence Stage Analysis}
 
 A variety of data mining methods have been proposed to identify stages and their progression while few visualization techniques have been studied. Many of the data mining methods focus on the application domains such as medical data analysis. For example, Zhou et al.~\cite{zhou2013modeling} use fused lasso formulation for stage detection. Jackson et al.~\cite{jackson2003multistate} and Wang et al.~\cite{lu2016exploring} both detect the underlying stages based on the Hidden Markov Model. Yang et al.~\cite{yang2014finding} use the EM algorithm to associate stages with sequences. Recently, EventThread~\cite{guo2018eventthread} visualizes the stage progression patterns with storyline visualization. To the best of our knowledge, it is the first work that focuses on stage progression visualization. The main difference between EventThread and StageMap is that EventThread mainly focuses on visual representation and simply extracts stages by uniformly segmenting sequences, while StageMap tries to extract the optimized stages and visually represent the data consistently. 

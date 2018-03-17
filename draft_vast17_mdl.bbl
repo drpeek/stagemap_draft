@@ -61,6 +61,12 @@ B.~C. Kwon, J.~Verma, and A.~Perer.
 \newblock In {\em ACM SIGKDD 2016 Workshop on Interactive Data Exploration and
   Analytics}, 2016.
 
+\bibitem{li2008efficiently}
+C.~Li and J.~Wang.
+\newblock Efficiently mining closed subsequences with gap constraints.
+\newblock In {\em proceedings of the 2008 SIAM International Conference on Data
+  Mining}, pp. 313--322. SIAM, 2008.
+
 \bibitem{liu2017coreflow}
 Z.~Liu, B.~Kerr, M.~Dontcheva, J.~Grover, M.~Hoffman, and A.~Wilson.
 \newblock Coreflow: Extracting and visualizing branching patterns from event
